@@ -1,4 +1,4 @@
- Aspell Dictionaries
+  Aspell Dictionaries
   ===================
 
 This project contains sources for some special dictionaries for [GNU
