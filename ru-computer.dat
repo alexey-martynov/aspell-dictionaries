@@ -1,0 +1,9 @@
+name ru-computer
+charset UTF-8
+special ' -*-
+affix ru
+affix-compress true
+
+аллокатор/K
+деструктор/K
+квалификатор/K
