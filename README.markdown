@@ -1,5 +1,5 @@
-  Aspell Dictionaries
-  ===================
+Aspell Dictionaries
+===================
 
 This project contains sources for some special dictionaries for [GNU
 Aspell](http://aspell.net/).
@@ -9,8 +9,8 @@ in Russian. For simplicity it contains also some useful English words
 like keywords from C++ and abbrevs. It is not complete. All words
 added in case when Aspell misses them in texts.
 
-  Building and Installing
-  -----------------------
+Building and Installing
+-----------------------
 
 To build this dictionaries GNU Aspell must be installed. The Makefile
 performs all required tasks.
