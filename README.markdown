@@ -19,4 +19,4 @@ To install, the files "ru-computer.dat" and "ru-computer.rws" should
 be copied to the dictionary directory on system. The file "ru.multi"
 should be updated by adding line:
 
-       add ru-computer
+       add ru-computer.rws
