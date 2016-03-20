@@ -22,8 +22,6 @@ ruen: ruen.rws
 
 install-ruen: ruen.rws
 	cp $< $(dict_dir)
-	cp $(dict_dir)/ru.dat $(dict_dir)/ru.dat.orig
-	cat $(dict_dir)/ru.dat.orig <(grep '^special' $(dict_dir)/en.dat) | uniq > $(dict_dir)/ru.dat
 	cp ruen.rws $(dict_dir)/
 	if ! grep 'ruen\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
 	cp $(dict_dir)/ru.multi $(dict_dir)/ru.multi.orig-ruen \
@@ -31,8 +29,9 @@ install-ruen: ruen.rws
 	&& echo "add ruen.rws" >> $(dict_dir)/ru.multi ; fi
 
 ruen.rws:
+	cp $(dict_dir)/ru.dat $(dict_dir)/ru.dat.orig
+	cat $(dict_dir)/ru.dat.orig <(grep '^special' $(dict_dir)/en.dat) | uniq > $(dict_dir)/ru.dat
 	aspell dump master en > all.tmp
 	aspell dump master ru-ye >> all.tmp
 	aspell --lang=ru --encoding=utf-8 create master ./ruen.rws < all.tmp
 	rm all.tmp
-
