@@ -5,6 +5,7 @@ cout
 cerr
 clog
 cin
+committer
 const
 cpp
 cxx
@@ -85,6 +86,7 @@ NoDerivs
 деструктор/K
 инстанцирование/j
 квалификатор/K
+конструктор/K
 логин/K
 метапрограммирование/j
 мьютекс/K
