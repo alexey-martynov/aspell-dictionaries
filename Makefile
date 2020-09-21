@@ -16,9 +16,16 @@ install-ru: ru-computer.rws
 
 install-en: en-computer.rws
 	cp $< $(dict_dir)
+	if test -f $(dict_dir)/en.multi ; then \
+	if ! grep 'en-computer\.rws' $(dict_dir)/en.multi > /dev/null ; then \
+	cp $(dict_dir)/en.multi $(dict_dir)/en.multi.orig-computer \
+	&& echo "add en-computer.rws" >> $(dict_dir)/en.multi ; fi \
+	fi
+	if test -f $(dict_dir)/ru.multi ; then \
 	if ! grep 'en-computer\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
 	cp $(dict_dir)/ru.multi $(dict_dir)/ru.multi.orig-computer \
-	&& echo "add en-computer.rws" >> $(dict_dir)/ru.multi ; fi
+	&& echo "add en-computer.rws" >> $(dict_dir)/ru.multi ; fi \
+	fi
 
 clean:
 	rm -f *.rws *.tmp ru.dat
