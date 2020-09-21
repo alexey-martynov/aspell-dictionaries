@@ -4,19 +4,27 @@ SHELL := bash
 
 dict_dir := $(shell aspell config dict-dir)
 
-all: ru-computer.rws
+all: ru-computer.rws en-computer.rws
 
-install: ru-computer.rws
+install: install-ru install-en
+
+install-ru: ru-computer.rws
 	cp $< $(dict_dir)
 	if ! grep 'ru-computer\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
 	cp $(dict_dir)/ru.multi $(dict_dir)/ru.multi.orig-computer \
 	&& echo "add ru-computer.rws" >> $(dict_dir)/ru.multi ; fi
 
+install-en: en-computer.rws
+	cp $< $(dict_dir)
+	if ! grep 'en-computer\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
+	cp $(dict_dir)/ru.multi $(dict_dir)/ru.multi.orig-computer \
+	&& echo "add en-computer.rws" >> $(dict_dir)/ru.multi ; fi
+
 clean:
 	rm -f *.rws *.tmp ru.dat
 
-ru-computer.rws: ru-computer.words
-	aspell --lang=ru --encoding=utf-8 create master ./$@ < $<
+%-computer.rws: %-computer.words
+	aspell --lang=$(patsubst %-computer.words,%,$<) --encoding=utf-8 create master ./$@ < $<
 
 ruen: ruen.rws
 

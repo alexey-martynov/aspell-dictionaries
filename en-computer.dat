@@ -1,0 +1,5 @@
+name en-computer
+charset UTF-8
+special ' -*-
+affix en
+affix-compress true
