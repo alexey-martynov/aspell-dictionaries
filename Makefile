@@ -4,15 +4,15 @@ SHELL := bash
 
 dict_dir := $(shell aspell config dict-dir)
 
-all: ru-computer.rws en-computer.rws
+all: ruen-computer.rws en-computer.rws
 
 install: install-ru install-en
 
-install-ru: ru-computer.rws
+install-ru: ruen-computer.rws
 	cp $< $(dict_dir)
-	if ! grep 'ru-computer\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
+	if ! grep 'ruen-computer\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
 	cp $(dict_dir)/ru.multi $(dict_dir)/ru.multi.orig-computer \
-	&& echo "add ru-computer.rws" >> $(dict_dir)/ru.multi ; fi
+	&& echo "add ruen-computer.rws" >> $(dict_dir)/ru.multi ; fi
 
 install-en: en-computer.rws
 	cp $< $(dict_dir)
@@ -21,17 +21,12 @@ install-en: en-computer.rws
 	cp $(dict_dir)/en.multi $(dict_dir)/en.multi.orig-computer \
 	&& echo "add en-computer.rws" >> $(dict_dir)/en.multi ; fi \
 	fi
-	if test -f $(dict_dir)/ru.multi ; then \
-	if ! grep 'en-computer\.rws' $(dict_dir)/ru.multi > /dev/null ; then \
-	cp $(dict_dir)/ru.multi $(dict_dir)/ru.multi.orig-computer \
-	&& echo "add en-computer.rws" >> $(dict_dir)/ru.multi ; fi \
-	fi
 
 clean:
-	rm -f *.rws *.tmp ru.dat
+	rm -f *.rws ruen-computer.words *.tmp ru.dat
 
 %-computer.rws: %-computer.words
-	aspell --lang=$(patsubst %-computer.words,%,$<) --encoding=utf-8 create master ./$@ < $<
+	aspell --lang=$(subst ruen,ru,$(patsubst %-computer.words,%,$<)) --encoding=utf-8 create master ./$@ < $<
 
 ruen: ruen.rws
 
@@ -50,3 +45,6 @@ ruen.rws:
 	aspell dump master ru-ye >> all.tmp
 	aspell --lang=ru --encoding=utf-8 create master ./ruen.rws < all.tmp
 	rm all.tmp
+
+ruen-computer.words: ru-computer.words en-computer.words
+	cat $< > $@
