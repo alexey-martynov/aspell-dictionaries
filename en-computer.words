@@ -15,12 +15,12 @@ curl
 declspec
 dllexport
 dllimport
-frontend
 en
 enum
 errno
 etag
 extern
+frontend
 haskell
 hpp
 http

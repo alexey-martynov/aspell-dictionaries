@@ -47,4 +47,4 @@ ruen.rws:
 	rm all.tmp
 
 ruen-computer.words: ru-computer.words en-computer.words
-	cat $< > $@
+	cat $^ > $@
