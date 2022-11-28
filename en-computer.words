@@ -29,6 +29,7 @@ http
 https
 hxx
 iconv
+io
 iosfwd
 ispell
 id
@@ -52,6 +53,7 @@ preprocessor
 radix
 reinit
 ru
+sharding
 sizeof
 src
 str
@@ -63,10 +65,13 @@ systemd
 tdd
 typedef
 typename
+uring
 vCenter
 wchar
 wget
+workqueue
 API
+ASAN
 Avahi
 CL
 Clozure
@@ -99,9 +104,11 @@ JPG
 JSON
 LaTeX
 LIBC
+MacOS
 NAMUR
 NonCommercial
 NoDerivs
+NUMA
 NVMe
 PNG
 POSIX
@@ -114,6 +121,7 @@ STL
 SVG
 TeX
 TLS
+TSAN
 UI
 UML
 UNIX
@@ -128,5 +136,5 @@ vSphere
 vCenter
 WPA
 WWN
+Xkb
 Xresources
-
