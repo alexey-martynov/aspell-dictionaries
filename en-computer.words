@@ -70,6 +70,7 @@ vCenter
 wchar
 wget
 workqueue
+zsh
 API
 ASAN
 Avahi
@@ -138,3 +139,6 @@ WPA
 WWN
 Xkb
 Xresources
+XML
+XSL
+XSLT
