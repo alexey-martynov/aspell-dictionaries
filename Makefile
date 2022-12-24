@@ -42,7 +42,7 @@ ruen.rws:
 	cp $(dict_dir)/ru.dat $(dict_dir)/ru.dat.orig
 	cat $(dict_dir)/ru.dat.orig <(grep '^special' $(dict_dir)/en.dat) | uniq > $(dict_dir)/ru.dat
 	aspell dump master en > all.tmp
-	aspell dump master ru-ye >> all.tmp
+	( aspell dump master ru-ye || aspell dump master ru ) >> all.tmp
 	aspell --lang=ru --encoding=utf-8 create master ./ruen.rws < all.tmp
 	rm all.tmp
 
