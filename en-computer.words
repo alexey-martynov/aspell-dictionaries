@@ -39,6 +39,8 @@ loopback
 makefile
 metadata
 microsoft
+multithreaded
+multithreading
 mutex
 namespace
 netmask
@@ -117,6 +119,7 @@ PostgreSQL
 PSK
 QEMU
 QT
+RAII
 RDMA
 README
 STL
