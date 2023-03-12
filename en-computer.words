@@ -15,6 +15,7 @@ cxx
 curl
 datastore
 declspec
+deduplication
 deinitialization
 dllexport
 dllimport
