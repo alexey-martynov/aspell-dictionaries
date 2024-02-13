@@ -42,6 +42,7 @@ loopback
 makefile
 metadata
 microsoft
+monad
 monadic
 multithreaded
 multithreading
@@ -97,6 +98,7 @@ FC
 FSM
 GCC
 GDB
+GHC
 GPG
 GPIO
 GTK
