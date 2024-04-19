@@ -1,5 +1,6 @@
 allocator
 aspell
+awk
 backend
 backtick
 bool
@@ -61,6 +62,7 @@ preprocessor
 radix
 reinit
 ru
+sed
 sharding
 sizeof
 src
