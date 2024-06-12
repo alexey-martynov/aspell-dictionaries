@@ -73,6 +73,7 @@ sudo
 syslog
 systemd
 tdd
+toolchain
 typedef
 typename
 uring
@@ -89,6 +90,7 @@ Clozure
 ClozureCL
 CP
 CLI
+Darwin
 DLL
 EINVAL
 EOF
@@ -118,6 +120,7 @@ JSON
 LaTeX
 LIBC
 MacOS
+MinGW
 NAMUR
 NonCommercial
 NoDerivs
