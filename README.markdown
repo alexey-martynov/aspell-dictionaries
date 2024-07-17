@@ -22,40 +22,40 @@ should be updated by adding line:
        add ru-computer.rws
 
 The folowing targets supported to simplify compilation and
-installation: 
+installation:
 
 * `ruen.rws`
 
   Generate dual-language (EN + RU) dictionary from currently installed
   EN and RU dictionaries.
-  
+
 * `ruen-computer.rws`
 
   Always dual language (EN + RU) dictionary with Computer
   Science-related words.
-  
+
 * `en-computer.rws`
 
   English dictionary with Computer Science-related words.
-  
+
 * `install-ru`
 
   Install dual language Computer Science dictionary to Russian
   multi-dictionary configuration.
-  
+
 * `install-en`
 
   Install English Computer Science dictionary to English
   multi-dictionary configuration.
-  
+
 * `install-ruen`
 
   Replace default Russian dictionary with dual language dictionary.
-  
+
 * `all` (default)
 
   Build only Computer Science dictionaries (Russian and English).
-  
+
 * `clean`
 
   Remove all generated files. This *does not* uninstall dictionaries.
