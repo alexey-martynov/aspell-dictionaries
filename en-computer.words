@@ -3,6 +3,7 @@ aspell
 awk
 backend
 backtick
+beamer
 bool
 cout
 cerr
@@ -39,6 +40,7 @@ ispell
 id
 journald
 liburing
+latex
 loopback
 makefile
 metadata
@@ -73,6 +75,7 @@ sudo
 syslog
 systemd
 tdd
+tex
 toolchain
 typedef
 typename
@@ -81,6 +84,9 @@ vCenter
 wchar
 wget
 workqueue
+xelatex
+xetex
+yadro
 zsh
 API
 ASAN
