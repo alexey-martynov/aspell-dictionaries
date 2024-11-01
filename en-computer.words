@@ -133,6 +133,7 @@ NoDerivs
 NUMA
 NVMe
 OpenAPI
+PCI
 PNG
 POSIX
 PostgreSQL
