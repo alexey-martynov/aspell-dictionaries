@@ -70,6 +70,7 @@ sizeof
 src
 str
 struct
+subdirectory
 submodule
 sudo
 syslog
